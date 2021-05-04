@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <title>Adloid</title>
+    <style>
+        body {
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="viewer-container"></div>
+    <script src="js/three.js"></script>
+    <script src="js/TrackballControls.js"></script>
+    <script src="js/FBXLoader.js"></script>
+    <script src="js/GLTFLoader.js"></script>
+    <script src="js/DRACOLoader.js"></script>
+    <script type="module">
+        import * as fflate from './js/fflate.module.js';
+        window.fflate = fflate;
+    </script>
+    <script src="js/cad-viewer.js"></script>
+
+    <button style="position: absolute; left: 10px; top: 10px;" onclick={loadOriginalModel()}>Load Original
+        Model</button>
+
+    <button style="position: absolute; left: 10px; top: 50px;" onclick={loadRedSizeModel()}>Load Reduced Size
+        Model</button>
+</body>
+
+</html>
